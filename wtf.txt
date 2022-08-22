@@ -1,0 +1,6 @@
+docker run -ti --device=/dev/ttyUSB0 -v `pwd`/:/root/SigmaLine ubuntu bash
+
+cd /root/SigmaLine
+apt update && apt install -y vim git make nodejs curl npm build-essential tmux && tmux
+node ./node_modules/coffee-script/bin/coffee ./lib/main.coffee
+http://localhost:8080/line/?message=text

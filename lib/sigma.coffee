@@ -82,7 +82,7 @@ class Sigma
       'я': 0xED
 
   readConfig: ->
-    @port = new SerialPort(config.getComPort(), config.getComConfig(), false)
+    @port = new SerialPort(config.getComConfig(), false)
     @win = config.getSigmaWindow()
     @color = @codeColor(config.getSigmaColor())
     @numberColor = @codeColor(config.getSigmaNumberColor())
